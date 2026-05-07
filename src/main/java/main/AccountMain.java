@@ -1,5 +1,7 @@
 package main;
 
+import service.AccountService;
+
 import java.util.Scanner;
 
 public class AccountMain {
@@ -14,13 +16,17 @@ public class AccountMain {
         System.out.println("0. 종료");
         System.out.println();
         System.out.print("실행할 번호를 입력하세요 : ");
-        while (true) {
-            int no = sc.nextInt();
+        try{
+            while (true) {
+                int no = sc.nextInt();
 
-            if (no == 0) {
-                System.out.println("프로그램을 종료합니다.");
-                break;
+                if (no == 0) {
+                    System.out.println("프로그램을 종료합니다.");
+                    break;
+                }
             }
+        } finally {
+            AccountService.getInstance().exportToCSV();
         }
     }
 }

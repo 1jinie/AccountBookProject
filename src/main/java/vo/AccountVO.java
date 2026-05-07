@@ -1,5 +1,6 @@
 package vo;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Objects;
 
@@ -70,7 +71,9 @@ public class AccountVO {
 
     @Override
     public String toString() {
-        return id + "," + type + "," + amount + "," + description + "," + category + "," + date;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dateStr = sdf.format(date.getTime());
+        return id + "," + type + "," + amount + "," + description + "," + category + "," + dateStr;
     }
 
     @Override
