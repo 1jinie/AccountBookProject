@@ -62,4 +62,8 @@ public class AccountService {
             throw new RuntimeException("출력값이 없습니다.");
         }
     }
+
+    public ArrayList<AccountVO> getAllAccount() {
+        return list;
+    }
 }
