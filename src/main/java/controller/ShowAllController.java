@@ -18,7 +18,7 @@ public class ShowAllController implements Controller {
             return;
         }
 
-        System.out.println("ID | 구분 | 금액 | 내용 | 카테고리 | 날짜");
+        System.out.println("\nID | 구분 | 금액 | 내용 | 카테고리 | 날짜");
         System.out.println("------------------------------------------");
 
         for(AccountVO vo : list){
