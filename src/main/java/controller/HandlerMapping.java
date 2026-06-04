@@ -13,6 +13,9 @@ public class HandlerMapping{
     public Controller getController(int no){
         Controller controller = null;
         switch (no){
+            case 1:
+                controller = new AddIncomeController();
+                break;
             case 3:
                 controller = new ShowAllController();
                 break;

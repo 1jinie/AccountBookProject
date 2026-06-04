@@ -36,7 +36,7 @@ public class AccountService {
     }
 
     private void loadFromCSV() {
-        try(FileReader fr = new FileReader("Account.csv");
+        try(FileReader fr = new FileReader("account.csv");
             BufferedReader br = new BufferedReader(fr)){
             br.readLine();
             while(true){
@@ -53,7 +53,7 @@ public class AccountService {
     }
 
     public void exportToCSV(){
-        try(FileWriter fw = new FileWriter("Account.csv");
+        try(FileWriter fw = new FileWriter("account.csv");
             PrintWriter pw = new PrintWriter(fw)){
             pw.println("id,type,amount,description,category,date");
             list.forEach(item -> pw.println(item.toString()));
@@ -66,4 +66,5 @@ public class AccountService {
     public ArrayList<AccountVO> getAllAccount() {
         return list;
     }
+
 }
