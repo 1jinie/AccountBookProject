@@ -16,6 +16,9 @@ public class HandlerMapping{
             case 1:
                 controller = new AddIncomeController();
                 break;
+            case 2:
+                controller = new AddOutcomeController();
+                break;
             case 3:
                 controller = new ShowAllController();
                 break;
