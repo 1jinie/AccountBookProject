@@ -28,6 +28,8 @@ public class HandlerMapping{
             case 5:
                 controller = new ShowBalanceController();
                 break;
+            default:
+                System.out.println("번호를 확인해주세요");
         }
         return controller;
     }
