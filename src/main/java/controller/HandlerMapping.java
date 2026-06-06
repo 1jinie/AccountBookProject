@@ -25,6 +25,9 @@ public class HandlerMapping{
             case 4:
                 controller = new ShowByMonthController();
                 break;
+            case 5:
+                controller = new ShowBalanceController();
+                break;
         }
         return controller;
     }
